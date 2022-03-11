@@ -1,0 +1,28 @@
+<!-- bottom_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/activity"
+        android:icon="@drawable/ic_activity"
+        android:title="@string/activity"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/login"
+        android:icon="@drawable/ic_login"
+        android:title="@string/login"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/logout"
+        android:title="@string/logout"
+        app:showAsAction="ifRoom"/>
+
+
+
+</menu>
+
