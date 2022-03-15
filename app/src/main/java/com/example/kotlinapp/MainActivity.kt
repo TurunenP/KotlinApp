@@ -1,11 +1,9 @@
 package com.example.kotlinapp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-
-import android.widget.Toast
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -13,21 +11,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-}
+        val btn_register = findViewById<TextView>(R.id.btn_register)
+        btn_register.setOnClickListener {
+            val intent = Intent(this@MainActivity, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.home -> Toast.makeText(this, "Home selected", Toast.LENGTH_SHORT).show()
-            R.id.login -> Toast.makeText(this, "Login selected", Toast.LENGTH_SHORT).show()
-            R.id.logout -> Toast.makeText(this, "Logout selected", Toast.LENGTH_SHORT).show()
-            R.id.activity-> Toast.makeText(this, "Activity selected", Toast.LENGTH_SHORT).show()
         }
-        return super.onOptionsItemSelected(item)
     }
-
 }
